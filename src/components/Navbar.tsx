@@ -1,14 +1,9 @@
 /**
- * Header navbar adhering to the 3-zone contract.
- * Uses emojis instead of SVG icons and avoids gradients.
+ * Header navbar adhering to the 2-zone contract.
  */
 
-interface NavbarProps {
-  onReset: () => void;
-  isProcessing: boolean;
-}
 
-export function Navbar({ onReset, isProcessing }: NavbarProps) {
+export function Navbar() {
   return (
     <header className="sticky top-0 z-30 flex items-center justify-between px-4 sm:px-6 py-3 bg-neutral-900 border-b border-neutral-800">
       {/* Zone 1: Single text element wordmark */}
@@ -22,41 +17,12 @@ export function Navbar({ onReset, isProcessing }: NavbarProps) {
             Client-Side Downgrade Lab
           </span>
         </div>
-        {isProcessing && (
-          <span className="text-xs px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono text-[11px] animate-pulse">
-            ⏳ Processing...
-          </span>
-        )}
       </div>
 
-      {/* Zone 2: Navigation / Info Anchors */}
-      <nav className="hidden md:flex items-center gap-6 text-xs font-medium text-neutral-400">
-        <a href="#presets" className="hover:text-amber-400 transition-colors">
-          Presets
-        </a>
-        <a href="#controls" className="hover:text-amber-400 transition-colors">
-          Degrade Controls
-        </a>
-        <a href="#viewport" className="hover:text-amber-400 transition-colors">
-          Comparison View
-        </a>
-        <a href="#about" className="hover:text-amber-400 transition-colors">
-          How It Works
-        </a>
-      </nav>
-
-      {/* Zone 3: Primary Actions */}
+      {/* Zone 2: GitBub */}
       <div className="flex items-center gap-2">
-        <button
-          onClick={onReset}
-          className="px-3 py-1.5 text-xs font-medium text-neutral-300 bg-neutral-800 hover:bg-neutral-700 hover:text-white rounded border border-neutral-700 transition-colors whitespace-nowrap cursor-pointer"
-          title="Reset all settings to default"
-        >
-          🔄 Reset
-        </button>
-
         <a
-          href="https://github.com"
+          href="https://github.com/Dirga36/PixelMangle"
           target="_blank"
           rel="noopener noreferrer"
           className="px-3 py-1.5 text-xs font-semibold text-neutral-900 bg-neutral-200 hover:bg-white rounded transition-colors whitespace-nowrap"
