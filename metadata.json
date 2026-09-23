@@ -1,6 +1,0 @@
-{
-  "name": "PixelMangle",
-  "description": "Degrade, pixelate, and add retro compression artifacts to images client-side in real-time.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
