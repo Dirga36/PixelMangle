@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .pixelated {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Custom dark scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #171717;
+}
+::-webkit-scrollbar-thumb {
+  background: #383838;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #525252;
+}
+
+/* Clean retro slider thumb styling */
+input[type="range"] {
+  accent-color: #f59e0b;
+}
