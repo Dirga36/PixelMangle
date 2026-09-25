@@ -89,5 +89,3 @@ The project currently has no automated unit, integration, or end-to-end test scr
 ## Contributing
 
 Keep image processing client-side unless a future change explicitly introduces a server boundary. Preserve the typed `MangleSettings` and preset contracts when adding effects, and keep UI changes aligned with the existing component boundaries. Before opening a pull request, run `npm run lint` and `npm run build`, then manually exercise upload, preset application, comparison modes, export formats, and clipboard behavior in a browser.
-
-No license file is currently included in the repository. Add or update licensing information before distributing the project.
