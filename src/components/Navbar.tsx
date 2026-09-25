@@ -9,11 +9,11 @@ interface NavbarProps {
 
 export function Navbar({ onReset, isProcessing }: NavbarProps) {
   return (
-    <header className="sticky top-0 z-30 flex items-center justify-between px-4 sm:px-6 py-3 bg-neutral-900 border-b border-neutral-800">
-      <div className="flex items-center gap-3">
-        <span className="text-xl select-none" aria-hidden="true">👾</span>
-        <div className="flex items-baseline gap-2">
-          <span className="text-lg font-bold tracking-tight text-white font-sans">
+    <header className="sticky top-0 z-30 flex items-center justify-between gap-2 px-3 py-3 sm:px-6 bg-neutral-900 border-b border-neutral-800">
+      <div className="flex min-w-0 items-center gap-2 sm:gap-3">
+        <span className="text-lg select-none sm:text-xl" aria-hidden="true">👾</span>
+        <div className="flex min-w-0 items-baseline gap-2">
+          <span className="truncate text-base font-bold tracking-tight text-white font-sans sm:text-lg">
             PixelMangle
           </span>
           <span className="hidden sm:inline text-xs text-neutral-400 font-mono">

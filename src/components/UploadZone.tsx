@@ -166,7 +166,7 @@ export function UploadZone({
           <span className="text-[11px] text-neutral-400">Click to load</span>
         </div>
 
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
           {SAMPLE_IMAGES.map((sample) => {
             const isSelected = activeImageName.toLowerCase().includes(sample.name.toLowerCase().replace(/\s+/g, '_'));
             return (
@@ -180,22 +180,22 @@ export function UploadZone({
                     : 'border-neutral-800 bg-neutral-900 hover:border-neutral-700 hover:bg-neutral-850'
                 }`}
               >
-                <div className="w-full h-14 rounded overflow-hidden bg-neutral-950 mb-1.5 relative border border-neutral-800">
+                <div className="w-full h-12 rounded overflow-hidden bg-neutral-950 mb-1.5 relative border border-neutral-800 sm:h-14">
                   <img
                     src={sample.src}
                     alt={sample.name}
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
                   />
-                  <span className="absolute bottom-1 right-1 text-xs drop-shadow">
+                  <span className="absolute bottom-1 right-1 text-[10px] drop-shadow sm:text-xs">
                     {sample.emoji}
                   </span>
                 </div>
-                <div className="w-full">
-                  <p className="text-xs font-medium text-neutral-200 truncate">
+                <div className="w-full min-w-0">
+                  <p className="text-[11px] font-medium text-neutral-200 truncate sm:text-xs">
                     {sample.name}
                   </p>
-                  <p className="text-[10px] text-neutral-400 truncate">
+                  <p className="text-[9px] text-neutral-400 truncate sm:text-[10px]">
                     {sample.id === 'pet-photo' ? 'Detailed fur' : sample.id === 'neon-synthwave' ? 'Vibrant lines' : 'Bold portrait'}
                   </p>
                 </div>

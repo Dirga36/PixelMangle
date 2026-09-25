@@ -140,7 +140,7 @@ export function ViewportCompare({
         ref={containerRef}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
-        className="relative flex-1 min-h-[380px] sm:min-h-[500px] bg-neutral-950 border border-neutral-800 rounded overflow-hidden flex items-center justify-center select-none"
+        className="relative flex-1 min-h-[280px] sm:min-h-[500px] bg-neutral-950 border border-neutral-800 rounded overflow-hidden flex items-center justify-center select-none"
         style={{ touchAction: 'none' }}
       >
         <div

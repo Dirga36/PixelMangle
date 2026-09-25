@@ -39,7 +39,7 @@ export function ControlPanel({
                 key={preset.id}
                 type="button"
                 onClick={() => onApplyPreset(preset.id)}
-                className={`flex items-center gap-2 p-2 rounded text-left border transition-all cursor-pointer ${
+                className={`flex items-center gap-1.5 p-2 rounded text-left border transition-all cursor-pointer sm:gap-2 ${
                   isActive
                     ? 'border-amber-400 bg-neutral-800 ring-1 ring-amber-400 text-amber-200'
                     : 'border-neutral-800 bg-neutral-900 text-neutral-200 hover:border-neutral-700 hover:bg-neutral-850'
@@ -49,7 +49,7 @@ export function ControlPanel({
                   {preset.emoji}
                 </span>
                 <div className="min-w-0 flex-1">
-                  <p className="text-xs font-semibold truncate leading-tight">
+                  <p className="text-[10px] font-semibold truncate leading-tight sm:text-xs">
                     {preset.name}
                   </p>
                 </div>
@@ -68,7 +68,7 @@ export function ControlPanel({
         </div>
 
         <div className="space-y-1">
-          <div className="flex items-center justify-between text-xs">
+          <div className="flex flex-col gap-1 text-xs sm:flex-row sm:items-center sm:justify-between">
             <span className="text-neutral-300 font-medium flex items-center gap-1">
               <span>🧱</span> Pixel Density / Resolution
             </span>
@@ -93,7 +93,7 @@ export function ControlPanel({
         </div>
 
         <div className="space-y-1 pt-1 border-t border-neutral-800/60">
-          <div className="flex items-center justify-between text-xs">
+          <div className="flex flex-col gap-1 text-xs sm:flex-row sm:items-center sm:justify-between">
             <span className="text-neutral-300 font-medium flex items-center gap-1">
               <span>💾</span> JPEG Compression Quality
             </span>
@@ -117,9 +117,9 @@ export function ControlPanel({
           </div>
 
           {settings.jpegQuality < 95 && (
-            <div className="flex items-center justify-between pt-1 text-xs">
+            <div className="flex flex-col gap-2 pt-1 text-xs sm:flex-row sm:items-center sm:justify-between">
               <span className="text-neutral-400">Re-compression Passes:</span>
-              <div className="flex gap-1">
+              <div className="flex flex-wrap gap-1">
                 {[1, 2, 3, 4, 5].map((pass) => (
                   <button
                     key={pass}
@@ -157,7 +157,7 @@ export function ControlPanel({
             </span>
           </div>
 
-          <div className="grid grid-cols-5 gap-1 text-[11px]">
+          <div className="grid grid-cols-2 gap-1 text-[10px] sm:grid-cols-5 sm:text-[11px]">
             {[
               { id: 'full', label: 'Full', emoji: '🌈' },
               { id: '8bit', label: '8-Bit', emoji: '🕹️' },
